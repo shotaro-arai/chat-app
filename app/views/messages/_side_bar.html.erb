@@ -5,15 +5,18 @@
 
   </div>
   <div class="make-room">
-    <a href="#" >チャットを作成する</a>
+    <%= link_to 'チャットを作成する', new_room_path %>
+    <%# <a href="#" >チャットを作成する</a> %>
   </div>
 </div>
 
 <div class="side-bar-body">
-  <div class="room-name">
-    <a href="#">本音の部屋</a>
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= room.name %></a>
+      </div>
+    </div>
+  <% end %>
   </div>
-  <div class="room-name">
-    <a href="#">内緒の部屋</a>
-  </div>
-</div>
+ 
