@@ -12,6 +12,6 @@
   <div class="bottom-content">
       <!-- 投稿したメッセージ内容を記述する -->
       <%= message.content%>
-      <%= image_tag message.image.variant(resize: '500x500'), class: 'form-image' if message.image.attached? %>
+      <%= image_tag message.image.variant(resize: '500x500'), class: 'image-form' if message.image.attached? %>
   </div>
 </div>
